@@ -1,0 +1,15 @@
+#cloud-config
+ssh_authorized_keys:
+  ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCb2Sj6XwXfZ0Tc8qjUUcH3J+EohD2XJvh8mxvK4koDrmtHn0fls0gC0bkhD54H/XHq8bUV4P3OvgoYxf6qMgH0PvHwwfZ/Mi99cMhu6GFputUP5CpGjqNK4uOa9p1gLO+SS5yy75b7vYc8Aa05HfvpybXgiGjNjlC4P8AO7TiXzV+kQXZobRS+W2EA9EJLq9lXfrZiwSED3PTb1EjfgpEoRr2Dza3Z5ezLQ+Jtp+Kz3d4h3xuXjBwn6fLrjtdqVNpJKAX4lND/1ntUfRX0DYfGAQgWLZ76mkX9MJpcMnBftcr6RlSwnr7RrfEjZAK1xgKaWmZq/S2YGASTtaHcaKa/ jinggerzh@21cn.com
+hostname: rancher
+rancher:
+  network:
+    interfaces:
+      eth0:
+        address: 192.168.5.102/24
+        gateway: 192.168.5.1
+        mtu: 1500
+        dhcp: false
+    dns:
+      nameservers:
+        - 120.196.165.24
